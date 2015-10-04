@@ -1,0 +1,12 @@
+<ion-view view-title="Friends">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right animate-fade-slide-in" ng-repeat="user_friend in user_friends" type="item-text-wrap">
+        <img ng-src="{{user_friend.user.avatars.small.https}}">
+        <h2>{{user_friend.user.fullname}}</h2>
+        <p>{{user_friend.user.city + ', ' + user_friend.user.country}}</p>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

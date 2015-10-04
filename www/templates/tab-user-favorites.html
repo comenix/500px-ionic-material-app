@@ -1,0 +1,23 @@
+<ion-view view-title="Favorites">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="list">
+            <div ng-repeat="user_favorite in user_favorites" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>{{user_favorite.name}}</h2>
+                    <img class="full-image" ng-src="{{user_favorite.image_url}}">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item stable-bg assertive">
+                        <i class="icon ion-eye"></i>
+                        {{user_favorite.times_viewed}}
+                    </a>
+                    <a class="tab-item stable-bg positive-900">
+                        <i class="icon ion-ios-star"></i>
+                        {{user_favorite.rating}}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

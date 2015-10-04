@@ -40,56 +40,46 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.user-photos', {
+    url: '/user-photos',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-user-photos': {
+        templateUrl: 'templates/tab-user-photos.html',
+        controller: 'UserPhotosCtrl'
       }
     }
   })
 
-  .state('tab.gallery', {
-      url: '/gallery',
+  .state('tab.user-favorites', {
+      url: '/user-favorites',
       views: {
-        'tab-gallery': {
-          templateUrl: 'templates/tab-gallery.html',
-          controller: 'GalleryCtrl'
+        'tab-user-favorites': {
+          templateUrl: 'templates/tab-user-favorites.html',
+          controller: 'UserFavoritesCtrl'
         }
       }
     })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.user-friends', {
+      url: '/user-friends',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-user-friends': {
+          templateUrl: 'templates/tab-user-friends.html',
+          controller: 'UserFriendsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.user-friends-detail', {
+      url: '/user-friends/:chatId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-user-friends': {
+          templateUrl: 'templates/user-friends-detail.html',
+          controller: 'UserFriendsDetailCtrl'
         }
       }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  });
+    });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/user-photos');
 
 });
